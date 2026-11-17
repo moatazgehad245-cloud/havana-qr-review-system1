@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#111113">
+<title>HAVANA | شاركنا تجربتك</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+  <header class="brand-head">
+    <div class="logo">H</div>
+    <div class="brand">HAVANA<span>.</span></div>
+    <div class="brand-sub">RESTAURANT &amp; CAFÉ</div>
+    <p class="slogan">Will Be Your Home <b>♥</b></p>
+  </header>
+
+  <section class="hero">
+    <span class="eyebrow">YOUR EXPERIENCE MATTERS</span>
+    <h1>رأيك يهمنا في <em>Havana</em></h1>
+    <p>كل تجربة ليها حكاية، ورأيك بيساعدنا نخلي زيارتك الجاية أحسن.</p>
+  </section>
+
+  <section class="panel" id="reviewPanel">
+    <h2>قيّم تجربتك معانا</h2>
+    <p class="muted">اختار التقييم اللي يعبر عن تجربتك الحقيقية.</p>
+    <div class="stars" role="group" aria-label="التقييم من نجمة إلى خمس نجوم">
+      <button type="button" data-rating="1" aria-label="نجمة واحدة">★</button>
+      <button type="button" data-rating="2" aria-label="نجمتان">★</button>
+      <button type="button" data-rating="3" aria-label="ثلاث نجوم">★</button>
+      <button type="button" data-rating="4" aria-label="أربع نجوم">★</button>
+      <button type="button" data-rating="5" aria-label="خمس نجوم">★</button>
+    </div>
+    <p class="rating-caption" id="ratingCaption">اختار عدد النجوم</p>
+
+    <label class="field-label">إيه أكتر حاجة عجبتك؟ <small>(اختياري)</small></label>
+    <div class="chips" id="experienceChoices">
+      <button type="button" class="chip" data-choice="جودة الأكل">🍽️ جودة الأكل</button>
+      <button type="button" class="chip" data-choice="الطعم">👨‍🍳 الطعم</button>
+      <button type="button" class="chip" data-choice="الخدمة">✨ الخدمة</button>
+      <button type="button" class="chip" data-choice="المكان والأجواء">☕ المكان والأجواء</button>
+      <button type="button" class="chip" data-choice="سرعة الطلب">⏱️ سرعة الطلب</button>
+    </div>
+
+    <label class="field-label" for="reviewText">تحب تقولنا حاجة؟ <small>(اختياري)</small></label>
+    <textarea id="reviewText" maxlength="1000" placeholder="اكتب رأيك أو اقتراحك هنا..."></textarea>
+    <div class="counter"><span id="charCount">0</span>/1000</div>
+
+    <label class="field-label" for="visitType">نوع الزيارة</label>
+    <select id="visitType">
+      <option value="داخل المطعم">داخل المطعم</option>
+      <option value="تيك أواي">تيك أواي</option>
+      <option value="دليفري">دليفري</option>
+      <option value="كافيه">كافيه</option>
+    </select>
+
+    <button class="primary-btn" id="submitReview">إرسال التقييم <span>←</span></button>
+    <p class="fineprint">تقييمك بيساعدنا نطور من نفسنا. شكرًا إنك جزء من عيلة Havana ❤️</p>
+    <div class="notice" id="notice" role="status"></div>
+  </section>
+
+  <section class="panel success-panel hidden" id="successPanel">
+    <div class="success-mark">✓</div>
+    <h2>شكرًا على وقتك!</h2>
+    <p>تم استلام تقييمك بنجاح. مستنيين نشوفك تاني في HAVANA.</p>
+    <p class="gold-text">Will Be Your Home ♥</p>
+  </section>
+
+  <footer><strong>HAVANA</strong><br>RESTAURANT &amp; CAFÉ</footer>
+</main>
+<script src="config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="client.js"></script>
+</body>
+</html>
